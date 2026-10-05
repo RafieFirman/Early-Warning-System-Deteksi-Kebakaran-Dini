@@ -160,12 +160,3 @@ https://wokwi.com/projects/476899317361810433
 ## Dokumentasi
 
 Dokumentasi lengkap mengenai teori, wiring, kode, dan hasil pengujian tersedia pada laporan praktikum.
-
-## Penulis
-
-**Muhammad Rafie Firman Rusidy**  
-NIM: **24051204065**  
-Program Studi S1 Teknik Informatika  
-Fakultas Teknik  
-Universitas Negeri Surabaya  
-2026
