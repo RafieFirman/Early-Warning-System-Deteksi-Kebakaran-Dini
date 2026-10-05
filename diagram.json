@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "author": "Rafie Firman",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": 313.8, "left": -112.4, "attrs": {} },
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": -95.4, "left": -234, "attrs": {} },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": 165.3,
+      "left": -10.1,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gas-sensor",
+      "id": "gas1",
+      "top": 168.8,
+      "left": 79.7,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 50.4,
+      "left": 337.8,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay1",
+      "top": 195,
+      "left": 358.8,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 544,
+      "left": -61.6,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 73.2,
+      "left": 243.8,
+      "attrs": { "color": "red", "flip": "" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 158.4,
+      "left": 229.85,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "mega:5V", "bb1:tp.1", "red", [ "v0" ] ],
+    [ "ntc1:VCC", "bb1:tp.12", "red", [ "v0" ] ],
+    [ "ntc1:GND", "bb1:tn.13", "black", [ "v38.4" ] ],
+    [ "mega:GND.2", "bb1:tn.2", "black", [ "v0" ] ],
+    [ "gas1:VCC", "bb1:tp.19", "red", [ "v0" ] ],
+    [ "gas1:GND", "bb1:tn.20", "black", [ "v0" ] ],
+    [ "bb1:tp.6", "bb1:bp.6", "red", [ "v0" ] ],
+    [ "bb1:tn.7", "bb1:bn.7", "black", [ "v0" ] ],
+    [ "relay1:IN", "mega:8", "limegreen", [ "v9.6", "h38.2", "v-432", "h-527.4" ] ],
+    [ "lcd1:GND", "bb1:bn.1", "black", [ "h0" ] ],
+    [ "lcd1:VCC", "bb1:bp.1", "red", [ "h-19.2", "v-85.4" ] ],
+    [ "lcd1:SDA", "mega:20", "blue", [ "h-201.6", "v-748.6", "h353.2" ] ],
+    [ "lcd1:SCL", "mega:21", "cyan", [ "h-211.2", "v-767.7", "h372.3" ] ],
+    [ "relay1:GND", "bb1:tn.44", "black", [ "v0" ] ],
+    [ "relay1:VCC", "bb1:tp.43", "red", [ "v0" ] ],
+    [ "ntc1:OUT", "mega:A0", "green", [ "v9.6", "h-9.5" ] ],
+    [ "gas1:AOUT", "mega:A1", "yellow", [ "v9.6", "h28.8", "v-163.2", "h-201.6", "v-26.1" ] ],
+    [ "bz1:2", "bb1:tn.40", "black", [ "v0" ] ],
+    [ "bz1:1", "mega:7", "gold", [ "v0", "h-38.4", "v-259.2", "h-364.8" ] ],
+    [
+      "led1:A",
+      "mega:6",
+      "red",
+      [ "v19.2", "h19.2", "v-105.6", "h0", "v-144", "h-278.4", "v0", "h-48" ]
+    ],
+    [ "led1:C", "r1:1", "black", [ "v0" ] ],
+    [ "r1:2", "bb1:tn.30", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
