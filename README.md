@@ -151,12 +151,8 @@ Berdasarkan laporan praktikum:
 - Pada kondisi asap tinggi, nilai asap >1500 ppm dengan suhu ≤35°C menyebabkan buzzer dan LED aktif, sedangkan relay tetap mati. fileciteturn25file0L210-L228
 - Pada kondisi bahaya, suhu >35°C dan asap >1500 ppm secara bersamaan menyebabkan relay aktif sebagai simulasi sprinkler, buzzer bekerja pada 1200 Hz, dan LED berkedip lebih cepat. fileciteturn25file0L229-L248
 
-## Sumber Kode Simulasi
+## Source Codw Simulasi
 
 Proyek simulasi Wokwi:
 
 https://wokwi.com/projects/476899317361810433
-
-## Dokumentasi
-
-Dokumentasi lengkap mengenai teori, wiring, kode, dan hasil pengujian tersedia pada laporan praktikum.
